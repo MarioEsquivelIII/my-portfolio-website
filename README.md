@@ -1,7 +1,14 @@
-# Welcome to My Portfolio Website!
+# Welcome to My Portfolio 🚀
 
-- I’m Mario Esquivel, a Computer Science student at Georgia Tech and an aspiring software engineer. This site is a showcase of my journey—highlighting the projects I’ve built, the skills I’ve developed, and the services I offer.
+Hi, I'm **Mario Esquivel** — a Computer Science student at **Georgia Tech** and an aspiring **software engineer** with a passion for building, learning, and solving real-world problems through code.
 
-- Designed with a clean, modern interface using React and styled with custom CSS, the site reflects my focus on usability and aesthetics. Whether it’s full-stack applications, AI/ML experiments, or tech support insights, each section tells a story of learning, problem-solving, and growth.
+This portfolio is more than just a collection of projects — it’s a reflection of my journey as a developer. From full-stack applications and AI/ML experiments to hands-on tech support insights, each section captures how I approach challenges and continuously grow in the tech space.
 
-- I built this portfolio not just to present my work, but to demonstrate how I think, build, and iterate as a developer.
+✨ **Highlights:**
+- Built with **React** and styled using custom **CSS** for a clean, modern look
+- Showcases my experience in **frontend & backend development**, **machine learning**, and **cloud-based solutions**
+- Offers insight into how I **think**, **build**, and **iterate**
+
+Whether you're a recruiter, collaborator, or fellow coder — thanks for stopping by! Feel free to explore, connect, and reach out.
+
+> _“Code is more than syntax — it’s how we bring ideas to life.”_
