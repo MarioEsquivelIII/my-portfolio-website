@@ -23,7 +23,7 @@ const Home = () => (
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/my-portfolio-website">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
