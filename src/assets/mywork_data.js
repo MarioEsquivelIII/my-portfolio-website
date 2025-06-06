@@ -1,16 +1,18 @@
 import TaskManagerImg from '../assets/TaskManager_img.png'
-import mjobsimg from '../assets/m-jobsimg.png'
+import mJobsImg from '../assets/m-jobsimg.png'
 
 const mywork_data = [
     {
-        w_no:1,
-        w_name:"TaskManager",
-        w_img:TaskManagerImg
+        no:1,
+        name:"TaskManager",
+        img:TaskManagerImg,
+        github:"https://github.com/MarioEsquivelIII/TaskManager-Project",
     },
     {
-        w_no:2,
-        w_name:"M-Jobs",
-        w_img:mjobsimg
+        no:2,
+        name:"M-Jobs",
+        img:mJobsImg,
+        github:"https://github.com/MarioEsquivelIII/M-Jobs",
     },
 ]
  

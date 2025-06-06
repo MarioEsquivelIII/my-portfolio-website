@@ -14,20 +14,14 @@ const MyWork = () => {
             {mywork_data.map((work,index)=>{
                 return(
                   <div className="card">
-                    <img className="card-img-top" key={index} src={work.w_img} alt=''/>
+                    <img className="card-img-top" key={index} src={work.img} alt=''/>
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">{work.name}</h5>
   </div>
-  <ul className="list-group list-group-flush">
-    <li className="list-group-item">Cras justo odio</li>
-    <li className="list-group-item">Dapibus ac facilisis in</li>
-    <li className="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <div className="card-body">
-    <a href="#" className="card-link">Card link</a>
-    <a href="#" className="card-link">Another link</a>
-  </div>
+  <div className="card-buttons">
+  <a href={work.github} target="_blank" rel="noopener noreferrer" className="card-button">GitHub</a>
+  <a href={work.demo} target="_blank" rel="noopener noreferrer" className="card-button">Live Demo</a>
+</div>
 </div>
                 ) 
             })}
