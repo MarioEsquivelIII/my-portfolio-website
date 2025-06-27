@@ -12,3 +12,5 @@ This portfolio is more than just a collection of projects — it’s a reflectio
 Whether you're a recruiter, collaborator, or fellow coder — thanks for stopping by! Feel free to explore, connect, and reach out.
 
 > _“Code is more than syntax — it’s how we bring ideas to life.”_
+
+# Reminder to run npm run build && npm run deploy to update GitHub Pages Deployment.
