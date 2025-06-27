@@ -1,7 +1,6 @@
 import React from 'react'
 import './MyWork.css'
 import mywork_data from '../../assets/mywork_data'
-import arrow_icon from '../../assets/arrow_icon.svg'
 
 const MyWork = () => {
   return (
