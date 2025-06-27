@@ -22,7 +22,6 @@ const mywork_data = [
         name: "Split View",
         img: SplitViewImg,
         github: "https://github.com/MarioEsquivelIII/active-tab-split",
-        demo: "coming soon to google chrome",
     },
 ]
 
