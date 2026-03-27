@@ -17,8 +17,8 @@ const Hero = () => {
             Computer Science Student at <strong>Georgia Tech</strong>
           </p>
           <p className="hero__description">
-            IT Backend Developer, AI/ML enthusiast, and full-stack builder.
-            Passionate about creating software that solves real problems.
+            IT Backend Developer, AI/ML enthusiast, full-stack builder, and game dev passionate.
+            Driven by creating software that solves real problems.
           </p>
           <div className="hero__actions">
             <a href="#projects" className="hero__btn hero__btn--primary">
