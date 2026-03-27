@@ -1,35 +1,27 @@
-import TaskManagerImg from '../assets/TaskManager_img.png'
 import mJobsImg from '../assets/m-jobsimg.png'
 import SplitViewImg from '../assets/Screenshot 2025-06-27 170544.png'
-import ifCalenderImg from '../assets/Screenshot 2025-06-28 230104.png'
+import Kronos from '../assets/Kronos.png'
 
 const mywork_data = [
     {
         no: 1,
-        name: "TaskManager",
-        img: TaskManagerImg,
-        github: "https://github.com/MarioEsquivelIII/TaskManager-Project",
-        demo: "https://marioesquiveliii.github.io/TaskManager-Project/",
+        name: "Kronos",
+        img: Kronos,
+        github: "https://github.com/MarioEsquivelIII/Kronos",
+        demo: "Coming Soon",
     },
     {
         no: 2,
-        name: "M-Jobs",
-        img: mJobsImg,
-        github: "https://github.com/MarioEsquivelIII/M-Jobs",
-        demo: "https://m-jobs.streamlit.app/",
-    },
-    {
-        no: 3,
         name: "Split View",
         img: SplitViewImg,
         github: "https://github.com/MarioEsquivelIII/active-tab-split",
     },
     {
-        no: 4,
-        name: "ifCalender",
-        img: ifCalenderImg,
-        github: "https://github.com/MarioEsquivelIII/ifCalender",
-        demo: "https://marioesquiveliii.github.io/ifCalender/",
+        no: 3,
+        name: "Research Position Finder",
+        img: "",
+        github: "https://github.com/MarioEsquivelIII/AI_Agent_Research_Position_Finder",
+        demo: "Coming Soon",
     },
 ]
 
