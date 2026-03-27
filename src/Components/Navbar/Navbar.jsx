@@ -1,48 +1,68 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './Navbar.css';
-import logo from '../../assets/logo.png';
-import active_tab from '../../assets/right-now.png';
-import menu_open from '../../assets/menu_open.svg';
-import menu_close from '../../assets/menu_close.svg';
-import underline from '../../assets/underline.png';
+import { useState, useEffect } from 'react'
+import './Navbar.css'
+
 const Navbar = () => {
-  const [menu, setMenu] = useState("home");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const menuRef = useRef();
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
 
-  const openMenu = () => {
-    menuRef.current.style.right = "0";
-  };
+      const sections = ['hero', 'about', 'skills', 'projects', 'photos', 'contact']
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i])
+        if (el && el.getBoundingClientRect().top <= 150) {
+          setActiveSection(sections[i])
+          break
+        }
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  const closeMenu = () => {
-    menuRef.current.style.right = "-350px";
-  };
+  const navLinks = [
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'photos', label: 'Photos' },
+    { id: 'contact', label: 'Contact' },
+  ]
 
   return (
-    <div id='navbar'>
-      <img src={logo} alt='' />
-      <img src={menu_open} alt='' onClick={openMenu} className='nav-mob-open' />
-      <ul ref={menuRef} className='nav-menu'>
-        <img src={menu_close} onClick={closeMenu} alt='' className='nav-mob-close' />
-        <li><a className='anchor-link' href='#home' onClick={() => setMenu("home")}><p>Home</p></a>{menu === "home" && <img src={isMobile ?active_tab : underline} alt='' />}</li>
-        <li><a className='anchor-link' href='#about' onClick={() => setMenu("about")}><p>About Me</p></a>{menu === "about" && <img src={isMobile ?active_tab : underline} alt='' />}</li>
-        <li><a className='anchor-link' href='#services' onClick={() => setMenu("services")}><p>Services</p></a>{menu === "services" && <img src={isMobile ?active_tab : underline} alt='' />}</li>
-        <li><a className='anchor-link' href='#mywork' onClick={() => setMenu("work")}><p>Portfolio</p></a>{menu === "work" && <img src={isMobile ?active_tab : underline} alt='' />}</li>
-        <li><a className='anchor-link' href='#contact' onClick={() => setMenu("contact")}><p>Contact</p></a>{menu === "contact" && <img src={isMobile ?active_tab : underline} alt='' />}</li>
-      </ul>
-      <div className='nav-connect'>
-        <a className='anchor-link' href='#contact'>Connect With Me</a>
-      </div>
-    </div>
-  );
-};
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="navbar__container">
 
-export default Navbar;
+        <div className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
+          {navLinks.map(link => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={`navbar__link ${activeSection === link.id ? 'navbar__link--active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a href="#contact" className="navbar__cta" onClick={() => setMenuOpen(false)}>
+            Get in Touch
+          </a>
+        </div>
+
+        <button
+          className={`navbar__toggle ${menuOpen ? 'navbar__toggle--open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar

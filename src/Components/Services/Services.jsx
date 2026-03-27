@@ -1,24 +1,37 @@
-import React from 'react'
 import './Services.css'
-import Services_Data from '../../assets/services_data'
-import arrow_icon from '../../assets/arrow_icon.svg'
+
+const skills = {
+  Languages: ['Java', 'Python', 'JavaScript', 'TypeScript', 'C', 'C++', 'Go', 'C#', 'HTML/CSS', 'Assembly'],
+  Frameworks: ['React.js', 'Next.js', 'Django', 'Spring Boot', 'Node.js', 'Express.js', 'NumPy', 'Pandas', 'OpenCV'],
+  Databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'Firebase', 'Supabase'],
+  'Tools & Platforms': ['Git', 'Docker', 'AWS', 'PyTorch', 'TensorFlow', 'RESTful APIs', 'Jira', 'PowerBI'],
+}
+
 const Services = () => {
   return (
-    <div id='services'>
-        <div className='services-title'>
-            <h1>My Services</h1>
+    <section id="skills">
+      <div className="section-container">
+        <div className="section-header">
+          <span className="section-label">Skills</span>
+          <h2 className="section-title">
+            Technologies I <span className="gradient-text">work with</span>
+          </h2>
         </div>
 
-        <div className='services-container'>
-            {Services_Data.map((service,index) => {
-                return <div key={index} className='services-format'>
-                            <h3>{service.s_no}</h3>
-                            <h2>{service.s_name}</h2>
-                            <p>{service.s_desc}</p>
-                        </div>
-            })}
+        <div className="skills__grid">
+          {Object.entries(skills).map(([category, items]) => (
+            <div key={category} className="skills__category">
+              <h3 className="skills__category-title">{category}</h3>
+              <div className="skills__tags">
+                {items.map(skill => (
+                  <span key={skill} className="skills__tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-    </div>
+      </div>
+    </section>
   )
 }
 
