@@ -1,14 +1,14 @@
 import './MyWork.css'
-import Kronos from '../../assets/Kronos.png'
+import NotedImg from '../../assets/noted.png'
 import SplitViewImg from '../../assets/Screenshot 2025-06-27 170544.png'
 
 const projects = [
   {
-    name: 'Kronos',
+    name: 'Noted',
     description: 'AI-powered calendar application that converts natural-language user input into structured, editable weekly schedules. Features prompt-based refinement, Supabase auth, persistent storage, and revision tracking.',
     tech: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Supabase', 'OpenAI API'],
-    image: Kronos,
-    github: 'https://github.com/MarioEsquivelIII/Kronos',
+    image: NotedImg,
+    github: 'https://github.com/MarioEsquivelIII/Noted',
     demo: null,
     highlights: ['70% less manual planning', '100+ event records', '60% fewer errors'],
   },

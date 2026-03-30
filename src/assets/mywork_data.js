@@ -1,13 +1,12 @@
-import mJobsImg from '../assets/m-jobsimg.png'
 import SplitViewImg from '../assets/Screenshot 2025-06-27 170544.png'
-import Kronos from '../assets/Kronos.png'
+import Noted from '../assets/noted.png'
 
 const mywork_data = [
     {
         no: 1,
-        name: "Kronos",
-        img: Kronos,
-        github: "https://github.com/MarioEsquivelIII/Kronos",
+        name: "Noted",
+        img: Noted,
+        github: "https://github.com/MarioEsquivelIII/Noted",
         demo: "Coming Soon",
     },
     {
