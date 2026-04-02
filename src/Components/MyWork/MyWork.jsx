@@ -4,6 +4,15 @@ import SplitViewImg from '../../assets/Screenshot 2025-06-27 170544.png'
 
 const projects = [
   {
+    name: 'CapsuleSpark',
+    description: 'A startup building an Android app to improve medication adherence by up to 35% for users managing 5+ prescriptions. Features reliable reminders, local prescription access, and secure cloud sync.',
+    tech: ['Kotlin', 'Jetpack Compose', 'Room', 'WorkManager', 'AlarmManager', 'Supabase'],
+    image: null,
+    github: 'https://github.com/MarioEsquivelIII/CapsuleSpark',
+    demo: null,
+    highlights: ['35% better adherence', '1,000+ prescription records', '500+ users supported'],
+  },
+  {
     name: 'Noted',
     description: 'AI-powered calendar application that converts natural-language user input into structured, editable weekly schedules. Features prompt-based refinement, Supabase auth, persistent storage, and revision tracking.',
     tech: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Supabase', 'OpenAI API'],

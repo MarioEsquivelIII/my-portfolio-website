@@ -1,6 +1,6 @@
 import './Hero.css'
 import profile_img from '../../assets/hero_img.jpg'
-import resume from '../../assets/Mario_s_Resume (17).pdf'
+import resume from '../../assets/Mario_s_Resume (19).pdf'
 import GitHubImg from '../../assets/2572-logo-github.svg'
 import linkedinImg from '../../assets/linkedin.png'
 
