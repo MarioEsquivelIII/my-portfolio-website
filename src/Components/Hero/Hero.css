@@ -57,11 +57,14 @@
 }
 
 .hero__description {
-  font-size: 1rem;
-  color: var(--text-muted);
+  font-size: 1.25rem;
+  color: #c8d0e0;
   line-height: 1.7;
   margin-bottom: 32px;
   max-width: 480px;
+  font-weight: 400;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .hero__actions {

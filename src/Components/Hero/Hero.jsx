@@ -1,6 +1,6 @@
 import './Hero.css'
 import profile_img from '../../assets/hero_img.jpg'
-import resume from '../../assets/Mario_s_Resume (19).pdf'
+import resume from '../../assets/Mario_s_Resume (20).pdf'
 import GitHubImg from '../../assets/2572-logo-github.svg'
 import linkedinImg from '../../assets/linkedin.png'
 
@@ -17,7 +17,7 @@ const Hero = () => {
             Computer Science Student at <strong>Georgia Tech</strong>
           </p>
           <p className="hero__description">
-            IT Backend Developer, AI/ML enthusiast, full-stack builder, and game dev passionate.
+            IT Backend Developer, AI/ML enthusiast, full-stack builder, game dev passionate, and startup enthusiast.
             Driven by creating software that solves real problems.
           </p>
           <div className="hero__actions">

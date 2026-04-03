@@ -4,11 +4,11 @@ import SplitViewImg from '../../assets/Screenshot 2025-06-27 170544.png'
 
 const projects = [
   {
-    name: 'CapsuleSpark',
+    name: 'CapsuleAlert',
     description: 'A startup building an Android app to improve medication adherence by up to 35% for users managing 5+ prescriptions. Features reliable reminders, local prescription access, and secure cloud sync.',
     tech: ['Kotlin', 'Jetpack Compose', 'Room', 'WorkManager', 'AlarmManager', 'Supabase'],
     image: null,
-    github: 'https://github.com/MarioEsquivelIII/CapsuleSpark',
+    github: 'https://github.com/MarioEsquivelIII/CapsuleAlert',
     demo: null,
     highlights: ['35% better adherence', '1,000+ prescription records', '500+ users supported'],
   },
