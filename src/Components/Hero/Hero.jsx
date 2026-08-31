@@ -10,8 +10,8 @@ const facts = [
 ]
 
 const proof = [
-  ['500+', 'people kept on their meds by CapsuleAlert'],
   ['94.7%', 'MRI accuracy across 4 tumor classes'],
+  ['26', 'finance channels read live by YouTubeTrades'],
   ['20', 'students taught to program'],
 ]
 
@@ -40,10 +40,10 @@ const Hero = () => {
 
         <div className="hero__lede">
           <p className="hero__lede-text">
-            I build software people actually use. A medication app that keeps
-            <em> 500 people </em> on schedule, a neural net that reads brain MRIs
-            at <em> 94.7% </em> accuracy, and a dashboard that ranks stocks by
-            what finance YouTubers are actually talking about.
+            I build software people actually use. A neural net that reads brain
+            MRIs at <em> 94.7% </em> accuracy, a dashboard that ranks stocks by
+            what finance YouTubers are <em> actually </em> talking about, and a
+            calendar that turns a sentence into a week's schedule.
           </p>
 
           <div className="hero__actions">
