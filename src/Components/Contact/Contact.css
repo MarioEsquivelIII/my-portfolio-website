@@ -26,7 +26,7 @@
   padding: 16px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 0;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s ease;
@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(99, 102, 241, 0.1);
-  border-radius: 10px;
+  background: var(--accent-wash);
+  border-radius: 0;
   flex-shrink: 0;
   color: var(--accent-light);
 }
@@ -69,7 +69,7 @@
 .contact__social {
   padding: 8px 20px;
   border: 1px solid var(--border);
-  border-radius: 50px;
+  border-radius: 0;
   font-size: 0.85rem;
   color: var(--text-secondary);
   text-decoration: none;
@@ -79,14 +79,14 @@
 .contact__social:hover {
   border-color: var(--accent);
   color: var(--accent-light);
-  background: rgba(99, 102, 241, 0.05);
+  background: rgba(227, 82, 38, 0.06);
 }
 
 .contact__form {
   padding: 32px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 0;
 }
 
 .contact__field {
@@ -107,7 +107,7 @@
   padding: 12px 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 0;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
@@ -132,7 +132,7 @@
   background: var(--accent);
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;

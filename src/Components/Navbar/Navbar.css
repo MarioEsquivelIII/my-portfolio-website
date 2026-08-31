@@ -10,27 +10,28 @@
 
 .navbar--scrolled {
   padding: 12px 0;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(20, 17, 15, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
 }
 
 .navbar__container {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .navbar__logo {
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 400;
   color: var(--text-primary);
   text-decoration: none;
-  letter-spacing: -1px;
+  letter-spacing: -0.01em;
 }
 
 .navbar__logo-accent {
@@ -44,8 +45,11 @@
 }
 
 .navbar__link {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -63,25 +67,28 @@
   bottom: -6px;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 1px;
   background: var(--accent);
-  border-radius: 1px;
 }
 
 .navbar__cta {
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 500;
-  color: var(--text-primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
   text-decoration: none;
-  padding: 8px 20px;
-  border: 1px solid var(--border-hover);
-  border-radius: 50px;
+  padding: 9px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 0;
   transition: all 0.3s ease;
 }
 
 .navbar__cta:hover {
   background: var(--accent);
   border-color: var(--accent);
+  color: #14110f;
 }
 
 .navbar__socials {

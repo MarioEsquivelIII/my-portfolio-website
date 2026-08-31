@@ -1,20 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #111118;
-  --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
-  --accent: #6366f1;
-  --accent-light: #818cf8;
-  --accent-2: #8b5cf6;
-  --cyan: #06b6d4;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(255, 255, 255, 0.12);
-  --gradient: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+  /* Ink & paper — warm near-black ground, cream type */
+  --bg-primary: #14110f;
+  --bg-secondary: #1a1614;
+  --bg-card: rgba(245, 241, 232, 0.025);
+  --bg-card-hover: rgba(245, 241, 232, 0.05);
+
+  --text-primary: #f5f1e8;
+  --text-secondary: #a8a09a;
+  --text-muted: #6d645d;
+
+  /* One accent. Signal vermillion. */
+  --accent: #e35226;
+  --accent-light: #f0754a;
+  --accent-2: #e35226;
+  --cyan: #e35226;
+  --accent-wash: rgba(227, 82, 38, 0.1);
+
+  /* Hairline rules do the structural work — no shadows, no glass */
+  --border: rgba(245, 241, 232, 0.11);
+  --border-hover: rgba(245, 241, 232, 0.28);
+  --rule: rgba(245, 241, 232, 0.14);
+
+  --gradient: var(--accent);
+
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Editorial grid */
+  --measure: 34rem;
+  --gutter: 40px;
 }
 
 * {
@@ -28,13 +45,24 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* Paper grain — keeps the flat ink from feeling like a screenshot */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::-webkit-scrollbar {
@@ -47,10 +75,18 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--text-muted);
-  border-radius: 3px;
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.3);
-  color: var(--text-primary);
+  background: var(--accent);
+  color: #14110f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -47,7 +47,7 @@ const About = () => {
               new technologies in AI/ML, full-stack development, and cloud computing.
             </p>
             <div className="about__education">
-              <div className="about__edu-icon">&#127891;</div>
+              <div className="about__edu-icon" aria-hidden="true">GT</div>
               <div>
                 <h4>Georgia Institute of Technology</h4>
                 <p className="about__edu-detail">B.S. Computer Science | Aug 2023 - May 2027</p>
