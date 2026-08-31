@@ -1,6 +1,5 @@
 import './MyWork.css'
 import NotedImg from '../../assets/noted.png'
-import SplitViewImg from '../../assets/Screenshot 2025-06-27 170544.png'
 
 const projects = [
   {
@@ -26,26 +25,34 @@ const projects = [
     highlights: ['70% less manual planning', '100+ event records', '60% fewer errors'],
   },
   {
-    name: 'AI Agent Research Job Finder',
-    kind: 'Autonomous agent',
+    name: 'Brain Tumor MRI Classifier',
+    kind: 'Deep learning / PyTorch',
     description:
-      'Autonomous AI agent that discovers undergraduate research opportunities by searching university lab websites, scraping pages, and extracting faculty contact emails using LangChain tool-calling.',
-    tech: ['Python', 'LangChain', 'LLM Agents', 'Tavily API', 'BeautifulSoup'],
+      'A ResNet18 transfer-learning model that reads a brain MRI and classifies it as glioma, meningioma, pituitary tumor, or no tumor. Ships with a confusion matrix, per-class precision and recall, and a measured robustness table across eight image perturbations.',
+    tech: ['Python', 'PyTorch', 'torchvision', 'ResNet18', 'NumPy'],
     image: null,
-    github: 'https://github.com/MarioEsquivelIII/AI_Agent_Research_Position_Finder',
+    github: 'https://github.com/MarioEsquivelIII/BrianTumorNeuralNetwork',
     demo: null,
-    highlights: ['80%+ faster search', 'Pydantic outputs', 'Auto email extraction'],
+    highlights: [
+      '94.7% test accuracy over 4 classes',
+      '7,200 labeled MRI scans',
+      'Robustness measured, not assumed',
+    ],
   },
   {
-    name: 'Split View',
-    kind: 'Chrome extension',
+    name: 'YouTubeTrades',
+    kind: 'Web app / data pipeline',
     description:
-      'Chrome extension that splits a browser tab into multiple resizable panels for improved multitasking. Features responsive CSS Grid layouts, keyboard shortcuts, and a privacy-first architecture with zero data collection.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    image: SplitViewImg,
-    github: 'https://github.com/MarioEsquivelIII/active-tab-split',
+      'A stock-hype dashboard that ranks tickers by what finance YouTubers are actually talking about this week. Pulls recent uploads, reads their spoken transcripts, extracts mentioned tickers with rules rather than an LLM, and attaches live quotes.',
+    tech: ['TypeScript', 'Next.js 15', 'React 19', 'Tailwind CSS', 'YouTube Data API', 'Finnhub'],
+    image: null,
+    github: 'https://github.com/MarioEsquivelIII/YoutubeTrades',
     demo: null,
-    highlights: ['200+ active users', 'Zero data collection', 'Keyboard shortcuts'],
+    highlights: [
+      '26 finance channels tracked',
+      '11 investment themes',
+      'Transcript-level attribution',
+    ],
   },
 ]
 
@@ -84,7 +91,7 @@ const MyWork = () => {
 
               <aside className="entry__notes">
                 {project.highlights.map(h => {
-                  const match = h.match(/^([\d,]+%?\+?|Zero)\s+(.*)$/i)
+                  const match = h.match(/^([\d,.]+%?\+?|Zero)\s+(.*)$/i)
                   return (
                     <p key={h} className="entry__note">
                       {match ? (
