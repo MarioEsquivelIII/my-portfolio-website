@@ -1,6 +1,6 @@
 import './Hero.css'
 import profile_img from '../../assets/hero_img.jpg'
-import resume from '../../assets/Mario_Esquivel_Resume.pdf'
+import resume from '../../assets/Mario_s_Resume.pdf'
 
 const facts = [
   ['Role', 'IT Backend Developer, Georgia Tech'],
@@ -50,7 +50,7 @@ const Hero = () => {
             <a href="#projects" className="hero__btn hero__btn--primary">
               See the work
             </a>
-            <a href={resume} download="Mario_Esquivel_Resume.pdf" className="hero__btn">
+            <a href={resume} download="Mario_s_Resume.pdf" className="hero__btn">
               Resume <span aria-hidden="true">&darr;</span>
             </a>
             <a
